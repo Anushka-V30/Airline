@@ -164,6 +164,10 @@ nav a:hover {
 .contact-form button[type="submit"]:hover {
     background-color: #0056b3;
 }
+.contact-form
+{
+    background-color: whitesmoke;
+}
 
 /* Social Media */
 .social-media {
@@ -214,6 +218,11 @@ footer {
     font-size: 2.5em;
 }
 
+.rating_class
+{
+    background-color: whitesmoke;
+}
+
 .rating {
     direction: rtl;
     unicode-bidi: bidi-override;
@@ -230,7 +239,7 @@ footer {
 }
 
 .rating > label {
-    color:white;
+    color: white;
     font-weight: bolder;
     font-size: 2em;
     cursor: pointer;
