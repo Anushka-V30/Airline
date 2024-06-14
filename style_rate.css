@@ -16,7 +16,7 @@ body {
 
 header {
     background-color: #fff;
-    padding:5px 0;
+    padding:4px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -24,13 +24,13 @@ header {
     float: left;
     font-size: 27px;
     font-weight: bold;
-    color:#007bff;
+    color:black;
     text-decoration:solid;
 }
 
 .logo {
     position: relative;
-    left: -150px; /* Adjust the value as needed */
+    left: -125px; /* Adjust the value as needed */
 }
 
 
@@ -65,7 +65,8 @@ nav a:hover {
 /* Hero Section */
 .hero {
     /* background-image: linear-gradient(to right, #3990ec, #1673d5); */
-    background-image: url("pexels-stefanstefancik-91217 (1).jpg");
+    background-image: url("contact_us.jpg");
+    background-size: contain;
     /* color: #fff; */
     padding: 80px 0;
     text-align: center;
@@ -74,12 +75,14 @@ nav a:hover {
 .hero h1 {
     font-size: 48px;
     margin-bottom: 20px;
-    color: whitesmoke;
+    color: black;
+    text-decoration: solid;
+    text-align: center;
 }
 
 .hero p
 {
-    color: whitesmoke;
+    color: black;
 }
 
 .hero button {
@@ -98,23 +101,37 @@ nav a:hover {
 
 /* Contact Information */
 .contact-info {
-    padding: 40px 0;
+    padding: 70px 0;
+}
+
+.contact-info .contact_info
+{
+    column-count: 3;
+    position: relative;
+    margin-top: 50px;
 }
 
 .contact-info .info-item {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .contact-info
 {
-    background-image: url("pexels-stefanstefancik-91217 (1).jpg");
-    color: white;
+    background-image: url("contact_info.jpg");
+    background-size: 100vmax;
+    color: black;
+}
+
+.contact-info h2
+{
+    margin-top: -80px;
+    text-align: center;
 }
 
 .contact-info i {
     font-size: 32px;
-    color: #007bff;
+    color: rgb(247, 247, 247);
     margin-bottom: 10px;
 }
 
@@ -166,7 +183,7 @@ nav a:hover {
 }
 .contact-form
 {
-    background-color: whitesmoke;
+    background-color: rgba(241, 229, 209, 0.579);
 }
 
 /* Social Media */
@@ -220,7 +237,7 @@ footer {
 
 .rating_class
 {
-    background-color: whitesmoke;
+    background-color: rgba(241, 229, 209, 0.579);
 }
 
 .rating {
