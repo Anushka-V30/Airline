@@ -1,13 +1,21 @@
-from django.shortcuts import render,redirect,get_object_or_404
+from django.shortcuts import render,redirect,get_object_or_404,HttpResponseRedirect
 from django.contrib.auth import authenticate,login,logout,get_user_model
 from django.contrib.auth.decorators import login_required
 from portalapp.models import CustomUser
 from .models import Flight
 from django.contrib import messages
 from .models import Flight
-from .forms import FlightForm
+from .forms import FlightForm,ContactFormForm
 
-
+def contact_view(request):
+    if request.method == 'POST':
+        form = ContactFormForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/')
+    else:
+        form = ContactFormForm()
+    return render(request, 'contact_form.html', {'form': form})
 # Create your views here.
 def home(request):
     return render(request, 'index.html')
@@ -38,6 +46,7 @@ def signup2(request):
 
         fname=request.POST.get('first-name')
         lname=request.POST.get('last-name')
+        dob=request.POST.get('dob')
         addr=request.POST.get('straddr')
         towncity=request.POST.get('towncity')
         state=request.POST.get('state')
@@ -45,7 +54,7 @@ def signup2(request):
         pin=request.POST.get('pin')
         telno=request.POST.get('telno')
         
-        my_user = CustomUser.objects.create_user(username=uname, email=email, password=pass1, fname=fname, lname=lname, addr=addr,towncity=towncity, state=state, country=country, pin=pin, telno=telno)
+        my_user = CustomUser.objects.create_user(username=uname, email=email, password=pass1, fname=fname, lname=lname, dob=dob, addr=addr,towncity=towncity, state=state, country=country, pin=pin, telno=telno)
         my_user.save()
         return redirect('login')
     return render(request, 'signup2.html')
