@@ -21,6 +21,7 @@ class CustomUserManager(BaseUserManager):
 class CustomUser(AbstractUser):
     fname = models.CharField(max_length=30, blank=True, null=True)
     lname = models.CharField(max_length=30, blank=True, null=True)
+    dob = models.DateField(null=True, blank=True)
     addr = models.CharField(max_length=255, blank=True, null=True)
     towncity = models.CharField(max_length=100, blank=True, null=True)
     state = models.CharField(max_length=100, blank=True, null=True)
@@ -58,3 +59,11 @@ class Flight(models.Model):
     def __str__(self):
         return f'{self.airline} {self.flight_number}'
 
+class ContactForm(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    message = models.TextField()
+    submitted_at = models.DateTimeField(auto_now_add=True)
+    
+    def __str__(self):
+        return self.name
