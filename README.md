@@ -1,3 +1,3 @@
 # Airline
 
-Project By Anushka Verma, Ananya Karn, Yash Singhal
+Project By Anushka Verma, Ananya Karn, Yash Singhal, Amaan Zaidi
