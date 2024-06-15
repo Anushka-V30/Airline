@@ -5,8 +5,8 @@ Project By Anushka Verma, Ananya Karn, Yash Singhal, Amaan Zaidi
 # How to access local host:
 ```bash
 # Clone the repository
-git clone https://github.com/username/repo-name.git
-cd repo-name
+git clone https://github.com/Anushka-V30/Airline.git
+cd Airline
 
 # Set up django
 pip install django
